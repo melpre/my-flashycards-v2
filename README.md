@@ -61,23 +61,29 @@ Users should be able to:
 
 - ....
 
-<!-- ### Screenshot
+### Screenshot
 
-![](./loop-studios-landing-page.png) -->
+![](./public/Screenshot%202023-11-01%20at%204.02.32%20PM.png)
 
 <!-- ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
 
-<!-- ## My process -->
+## My Process
+1 Nov 2023:
+I took a long break from this project to focus on actively job searching, but now am in the mood to get this going again. Last I checked, I was having issues displaying data from a local file. I figured out that the fetch method only works for fetching data from a server, which I did not bother to set up since my dummy data is a very small JSON file. In the future, I may change this as my data grows and use Node and Express to set up a local server. Instead, I came across this info from the Next.js docs: https://vercel.com/guides/loading-static-file-nextjs-api-route, which satisfies my current needs. I needed to import the file system library into my cards page server component. From there I was able to asynchronously call to fetch json data from the same project directory. From there I passed the data on to the 'Question' UI component to dynamically render random card data everytime the page reloads. Again, lots to think about here such as:
+  1. making sure that each card question cycles through only once
+  2. toggle the 'show hint' button
+  3. create a mechanism to stop the quiz when all cards have been displayed
+
+Still, really enjoying learning how to use Next.js!
+
 
 
 ### Built with
 - React
 - Next
-
-<!-- **Note: These are just examples. Delete this note and replace the list above with your own choices** -->
 
 <!-- ### What I learned
 

@@ -1,10 +1,17 @@
-// components
-import FlashCard from "../components/FlashCard"
+// import { promises as fs } from 'fs';
 
-export default function Cards() {
+import Card from './Card.js';
+
+export default async function CardsPage() {
+  // const file = await fs.readFile(process.cwd() + '/src/app/flashcardData.json', 'utf8');
+  // const cards = JSON.parse(file);
+  // console.log(cards.cards[0].question);
+
   return (
-    <main>
-        <FlashCard />
-    </main>
+    <Card />
   )
 }
+
+
+
+

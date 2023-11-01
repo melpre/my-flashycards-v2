@@ -10,7 +10,7 @@ import Welcome from './components/Welcome'
 import Form from './components/Form'
 
 
-export default function Home() {
+export default function HomePage() {
   const [username, setUsername] = useState('')
   const [isSent, setIsSent] = useState(false)
   const [toggle, setToggle] = useState(true)
@@ -25,15 +25,13 @@ export default function Home() {
           quality={100}       // ensures image quality is 100%
           placeholder='blur'  // while image loads 
         />
-        <h2>Welcome to My Flashy Cards! An app to help you study</h2>
+        <h2>An app to help you study</h2>
       </header>
       <section className='namecard'>
-        <div className='namecard-login'>
-            <Welcome 
-              username={username} 
-              isSent={isSent} 
-            />
-        </div>
+          <Welcome 
+            username={username} 
+            isSent={isSent} 
+          />
         <Form 
           username={username} 
           setUsername={setUsername} 
