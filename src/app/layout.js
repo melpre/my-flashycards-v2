@@ -1,3 +1,6 @@
+// TO-DO
+  // Work on routes for Navbar
+
 import './globals.css'
 import { Rubik } from 'next/font/google'
 

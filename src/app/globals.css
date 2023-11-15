@@ -249,7 +249,9 @@ input {
 }
 
 #content button {
+  margin: 10px auto;
   display: block;
+
 }
 
 #content button:hover {
@@ -258,12 +260,13 @@ input {
   color: #fff;
 }
 
-.card-flip-wrap {
+
+/* .card-flip-wrap {
   position: absolute;
   bottom: 10px;
   left: 20px;
   padding-left: 500px;
-}
+} */
 
 .card-flip {
   max-width: 25px;

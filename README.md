@@ -38,28 +38,33 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # My Flashy Cards App - a study aid for my kids!
 This is a solution to help my kids memorize math facts, vocabulary and spelling!
 
+
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   <!-- - [Screenshot](#screenshot) -->
   <!-- - [Links](#links) -->
-<!-- - [My process](#my-process) -->
+- [My process](#my-process)
   - [Built with](#built-with)
-  <!-- - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-<!-- - [Author](#author)
+  [What I learned](#what-i-learned)
+  <!-- [Continued development](#continued-development) -->
+  <!-- [Useful resources](#useful-resources) -->
+<!-- [Author](#author)
 - [Acknowledgments](#acknowledgments) -->
 
 
 ## Overview
 I want to create a simple but attractive game that doubles as a learning tool and teaches me how to use Next.js. It's a win-win, killing two birds with one stone.
 
+
 ## The challenge
 Users should be able to:
 
-- ....
+- Log in with their name and have it displayed on the Welcome page
+- Take a flashcard quiz, with cards displaying at random
+- Users can interact with the 'Show Hint' button and 'flip card' button
+
 
 ### Screenshot
 
@@ -70,6 +75,7 @@ Users should be able to:
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
 
+
 ## My Process
 1 Nov 2023:
 I took a long break from this project to focus on actively job searching, but now am in the mood to get this going again. Last I checked, I was having issues displaying data from a local file. I figured out that the fetch method only works for fetching data from a server, which I did not bother to set up since my dummy data is a very small JSON file. In the future, I may change this as my data grows and use Node and Express to set up a local server. Instead, I came across this info from the Next.js docs: https://vercel.com/guides/loading-static-file-nextjs-api-route, which satisfies my current needs. I needed to import the file system library into my cards page server component. From there I was able to asynchronously call to fetch json data from the same project directory. From there I passed the data on to the 'Question' UI component to dynamically render random card data everytime the page reloads. Again, lots to think about here such as:
@@ -77,68 +83,61 @@ I took a long break from this project to focus on actively job searching, but no
   2. toggle the 'show hint' button
   3. create a mechanism to stop the quiz when all cards have been displayed
 
-Still, really enjoying learning how to use Next.js!
-
+Still, really enjoying learning how to use Next.js
 
 
 ### Built with
 - React
 - Next
 
-<!-- ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+### What I learned
 
-To see how you can add code snippets, see below:
+15 Nov 2023
+Today I learned how to add multiple classes conditionally in React. I needed to dynamically render background images depending on which side of the flashcard is visible (the 'Question' or 'Answer' side).
 
-```html
+<!-- ```html
 <h1>Some HTML code I'm proud of</h1>
-```
-```css
+``` -->
+<!-- ```css
 .proud-of-this-css {
   color: papayawhip;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+``` -->
+```jsx
+<div className={`card ${!side ? 'card-question' : 'card-answer'}`}></div>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+<!-- If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more. -->
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+<!-- **Note: Delete this note and the content within this section and replace with your own learnings.** -->
 
-### Continued development
+<!-- ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.** -->
 
-### Useful resources
+<!-- ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.** -->
 
-## Author
+<!-- ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.** -->
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.** -->
-
-
-
-
 
 <!-- ## The challenge -->
 <!-- There's a tiny bit of JS included for the mobile navigation toggle. But you could also choose to do this without JS! -->

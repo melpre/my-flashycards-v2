@@ -1,4 +1,3 @@
-
 export default function Form({ username, setUsername, setIsSent, toggle, setToggle }) {
 
   function handleSubmit(event) {
@@ -6,7 +5,6 @@ export default function Form({ username, setUsername, setIsSent, toggle, setTogg
     setIsSent(true)
     setToggle(false)
   }
-
 
   return (
     <>

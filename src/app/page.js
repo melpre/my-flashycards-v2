@@ -28,10 +28,10 @@ export default function HomePage() {
         <h2>An app to help you study</h2>
       </header>
       <section className='namecard'>
-          <Welcome 
-            username={username} 
-            isSent={isSent} 
-          />
+        <Welcome 
+          username={username} 
+          isSent={isSent} 
+        />
         <Form 
           username={username} 
           setUsername={setUsername} 
@@ -42,7 +42,7 @@ export default function HomePage() {
         <>
           {!toggle && (
             <div>
-              <h1 className="namecard-prompt">Let&apos;s get started</h1>
+              <h1 className="namecard-prompt">Let&apos;s get started!</h1>
               <a className="namecard-submit" href="/cards">Begin!</a>
             </div>
           )}
