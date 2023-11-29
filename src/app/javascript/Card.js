@@ -8,8 +8,6 @@ import React, {useState} from 'react'
 import Image from 'next/image'
 import Flip from '../../../public/img/flip.svg'
 import Next from '../../../public/img/next.svg'
-import Question from '../../../public/img/content-header-question.png'
-import Answer from '../../../public/img/content-header-answer.png'
 
 
 export default function RandomCardQuestion(props) {
@@ -29,9 +27,11 @@ export default function RandomCardQuestion(props) {
       <section className="flashcards">
         <div className={`card ${!side ? 'card-question' : 'card-answer'}`}>
           <div className="card-header"></div>
-          <h1 className="card-title">{
+          <h1 className="card-title">
+            {
             !side ? 'Question:' : 'Answer:'
-          }</h1>
+            }
+          </h1>
           <div id="content">
             <h2>{!side ? props.data.question : props.data.answer}</h2>
             {!hint ? (
@@ -48,7 +48,7 @@ export default function RandomCardQuestion(props) {
           </div>
           <div className="card-next">
               <a href="/cards">
-                  <Image src={Next} alt="Next card"/>
+                <Image src={Next} alt="Next card"/>
               </a>
           </div>
         </div>

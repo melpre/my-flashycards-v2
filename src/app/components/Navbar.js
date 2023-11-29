@@ -4,8 +4,9 @@ export default function Navbar() {
   return (
     <nav>
       <Link href="/">Home</Link>
-      {/* <Link href="/card">Quiz Me</Link>
-      <Link href="/create">Create New Quiz</Link> */}
+      <Link href="/javascript">JavaScript</Link>
+      <Link href="/vocabulary">Vocabulary</Link>
+      <Link href="/math">Math Facts</Link>
     </nav>
   )
 }

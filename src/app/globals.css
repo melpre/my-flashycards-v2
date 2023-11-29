@@ -167,7 +167,7 @@ input {
 
 /* Flash Cards */
 .flashcards {
-  position: absolute;
+  /* position: absolute; */
   top: 240px;
   right: 0;
   left: 0;
@@ -242,16 +242,11 @@ input {
 #content button {
   padding: 8px 10px;
   font-size: .8em;
-  margin: auto;
   color: #C79735;
   background-color: #F5F3ED;
   border: 1px solid #C79735;
-}
-
-#content button {
   margin: 10px auto;
   display: block;
-
 }
 
 #content button:hover {
@@ -274,7 +269,7 @@ input {
   border-radius: 50px;
   padding: 20px;
   border: 2px solid #fff;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .card-flip:hover {

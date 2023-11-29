@@ -43,7 +43,7 @@ export default function HomePage() {
           {!toggle && (
             <div>
               <h1 className="namecard-prompt">Let&apos;s get started!</h1>
-              <a className="namecard-submit" href="/cards">Begin!</a>
+              <a className="namecard-submit" href="/javascript">Begin!</a>
             </div>
           )}
         </>
